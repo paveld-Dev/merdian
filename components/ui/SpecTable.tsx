@@ -23,9 +23,8 @@ export function SpecTable({
       {rows.map((row, index) => (
         <div
           key={index}
-          className={`flex items-baseline justify-between py-3.5 ${
-            isDark ? 'hairline-b-dark text-white/80' : 'hairline-b-light text-[#121212]/80'
-          }`}
+          className={`flex items-baseline justify-between py-3.5 ${isDark ? 'hairline-b-dark text-white/80' : 'hairline-b-light text-[#121212]/80'
+            }`}
         >
           <span className={`uppercase tracking-[0.14em] ${isDark ? 'text-white/50' : 'text-[#121212]/60'}`}>
             {row.label}
