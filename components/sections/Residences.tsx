@@ -30,7 +30,7 @@ export function Residences() {
               COLLECTION
             </Eyebrow>
             <h2 className="heading-h2 text-[#121212]">
-              Five places. <em className="italic font-normal text-[var(--wine)]">One</em> philosophy.
+              Five places. <em className="italic font-normal text-[var(--wine)] inline-block mr-2">One</em>{' '}philosophy.
             </h2>
           </div>
 

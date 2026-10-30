@@ -20,7 +20,7 @@ export function Process() {
             BLUEPRINT PROTOCOL
           </Eyebrow>
           <h2 className="heading-h2 text-white">
-            From first light to <em className="italic font-normal text-[var(--pearl)]">eternal</em> stone.
+            From first light to <em className="italic font-normal text-[var(--pearl)] inline-block mr-2">eternal</em>{' '}stone.
           </h2>
           <p className="body-base text-white/70 mt-4">
             Four rigorous phases ensuring our residential architecture endures across generations without concession.

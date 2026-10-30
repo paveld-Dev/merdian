@@ -165,7 +165,7 @@ export function Hero() {
           <div className="lg:col-span-7 xl:col-span-8">
             <h1 className="display-xl text-white font-normal mb-6">
               Architecture <br />
-              that <em className="italic font-normal text-[#581825]">breathes</em> <br />
+              that <em className="italic font-normal text-[#BF2343]">breathes</em> <br />
               with its land.
             </h1>
 

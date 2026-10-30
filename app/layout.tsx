@@ -1,12 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { Instrument_Serif, Inter_Tight, JetBrains_Mono } from "next/font/google";
+import { Bebas_Neue, Inter_Tight, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-instrument-serif",
+const bebasNeue = Bebas_Neue({
+  variable: "--font-bebas-neue",
   subsets: ["latin"],
   weight: ["400"],
-  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -79,7 +78,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${instrumentSerif.variable} ${interTight.variable} ${jetbrainsMono.variable}`}
+      className={`${bebasNeue.variable} ${interTight.variable} ${jetbrainsMono.variable}`}
     >
       <body className="bg-[var(--paper)] text-[var(--ink)] antialiased selection:bg-[var(--brass)] selection:text-white">
         {children}

@@ -28,7 +28,8 @@ export function Manifesto() {
         <div className="py-16 sm:py-24 lg:py-32 max-w-5xl">
           <RevealText tag="h2" className="display-l font-normal">
             We don&apos;t build houses. We compose light, stone and{' '}
-            <em className="italic font-normal text-[var(--wine)]">silence</em> into places worth staying.
+            <em className="italic font-normal text-[var(--wine)] inline-block mr-2.5">silence</em>{' '}
+            into places worth staying.
           </RevealText>
 
           <div className="mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-12 gap-6 items-start">

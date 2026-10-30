@@ -11,20 +11,6 @@ export function Header() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-  const [timeStr, setTimeStr] = useState('18:42');
-
-  // Live time updater
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      const hours = String(now.getHours()).padStart(2, '0');
-      const minutes = String(now.getMinutes()).padStart(2, '0');
-      setTimeStr(`${hours}:${minutes}`);
-    };
-    updateTime();
-    const interval = setInterval(updateTime, 1000 * 60);
-    return () => clearInterval(interval);
-  }, []);
 
   // Scroll visibility and blur threshold
   useEffect(() => {
@@ -110,14 +96,8 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Right: Coordinates, Time, Search & CTA */}
+          {/* Right: Search & CTA */}
           <div className="flex items-center gap-3 sm:gap-5 flex-shrink-0">
-            {/* Live Coordinates & Time */}
-            <div className="hidden 2xl:flex items-center font-mono text-xs tracking-[0.14em] text-white/60 select-none whitespace-nowrap">
-              <span className="text-[var(--accent)] mr-1.5 animate-pulse">●</span>
-              <span>40°38&apos;N 14°36&apos;E — {timeStr}</span>
-            </div>
-
             {/* Search Trigger */}
             <button
               type="button"
@@ -184,9 +164,6 @@ export function Header() {
         </div>
 
         <div className="pt-8 hairline-t-dark flex flex-col gap-6">
-          <div className="font-mono text-xs tracking-wider text-white/60">
-            40°38&apos;N 14°36&apos;E — {timeStr}
-          </div>
           <Button
             variant="primary"
             tone="dark"

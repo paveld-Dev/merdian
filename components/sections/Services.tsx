@@ -29,7 +29,7 @@ export function Services() {
               ARCHITECTURAL PRACTICE
             </Eyebrow>
             <h2 className="heading-h2 text-white">
-              Disciplines of <em className="italic font-normal text-[var(--pearl)]">pure</em> intent.
+              Disciplines of <em className="italic font-normal text-[var(--pearl)] inline-block mr-2">pure</em>{' '}intent.
             </h2>
           </div>
           <p className="body-base text-white/60 max-w-md">

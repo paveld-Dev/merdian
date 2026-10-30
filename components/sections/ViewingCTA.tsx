@@ -79,7 +79,7 @@ export function ViewingCTA() {
         </div>
 
         <h2 className="display-l font-normal text-white mb-6 max-w-3xl">
-          Your next chapter, <em className="italic font-normal text-[var(--pearl)]">drawn</em> for you.
+          Your next chapter, <em className="italic font-normal text-[var(--pearl)] inline-block mr-2">drawn</em>{' '}for you.
         </h2>
 
         <p className="body-base text-white/75 font-sans max-w-xl mb-12">

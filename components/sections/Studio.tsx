@@ -37,7 +37,7 @@ export function Studio() {
             </Eyebrow>
 
             <h2 className="heading-h2 text-[#121212] mb-6">
-              Redefining <em className="italic font-normal text-[var(--wine)]">quiet</em> luxury.
+              Redefining <em className="italic font-normal text-[var(--wine)] inline-block mr-2">quiet</em>{' '}luxury.
             </h2>
 
             <div className="space-y-4 body-base text-[#121212]/80 max-w-xl">
