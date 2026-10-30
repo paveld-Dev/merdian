@@ -1,0 +1,60 @@
+'use client';
+
+import React from 'react';
+import { Eyebrow } from '@/components/ui/Eyebrow';
+import { Marquee } from '@/components/ui/Marquee';
+import { RevealText } from '@/components/ui/RevealText';
+
+export function Manifesto() {
+  return (
+    <section
+      id="manifesto"
+      className="relative w-full bg-[var(--paper)] text-[var(--ink)] pt-32 sm:pt-40 lg:pt-48 pb-16 sm:pb-24 overflow-hidden"
+    >
+      {/* Top Hairline & Section Coordinate Markers */}
+      <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
+        <div className="flex items-center justify-between pb-8 hairline-b-light font-mono text-[18px] text-[#121212]/60 tracking-[0.14em] uppercase">
+          <Eyebrow tone="light" index="01">
+            ORIGIN MANIFESTO
+          </Eyebrow>
+          <div className="hidden sm:flex items-center gap-4">
+            <span>GRID REF 01-B</span>
+            <span>·</span>
+            <span>AXIS LAT 40.6305°</span>
+          </div>
+        </div>
+
+        {/* 10-Col Large Serif Statement */}
+        <div className="py-20 sm:py-28 lg:py-36 max-w-5xl">
+          <RevealText tag="h2" className="display-l font-normal leading-[1.05] tracking-tight">
+            We don&apos;t build houses. We compose{' '}
+            <em className="italic font-normal text-[var(--accent)]">light, stone</em> and{' '}
+            <em className="italic font-normal text-[var(--accent)]">silence</em> into places worth staying.
+          </RevealText>
+
+          <div className="mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+            <div className="md:col-span-4 font-mono text-[18px] uppercase tracking-[0.14em] text-[#121212]/60">
+              PHILOSOPHY OF PERMANENCE
+            </div>
+            <div className="md:col-span-8 space-y-6 body-l text-[#121212]/80">
+              <p>
+                Every site possesses an unrepeatable frequency. Before pencil touches vellum, our studio maps the acoustic contour of the wind, the sun&apos;s angle at winter solstice, and the thermal memory of local stone.
+              </p>
+              <p>
+                The result is not architecture imposed upon the terrain, but an inevitable crystallization of the landscape itself.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Infinite Slow Marquee in Mono */}
+      <div className="w-full hairline-t-light hairline-b-light bg-[var(--stone)]/40 mt-8">
+        <Marquee
+          text="120+ RESIDENCES · 14 COUNTRIES · 38 AWARDS · 0 COMPROMISES · CRAFTED FOR GENERATIONS"
+          speed={40}
+        />
+      </div>
+    </section>
+  );
+}
