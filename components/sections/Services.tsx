@@ -48,9 +48,11 @@ export function Services() {
               <Link
                 key={srv.id}
                 href="#cta"
-                className={`group p-8 sm:p-12 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-white/[0.04] flex flex-col justify-between min-h-[320px] ${isRightBorder ? 'lg:hairline-r-dark' : ''
-                  } ${isBottomBorder ? 'lg:hairline-b-dark' : ''} ${index % 2 === 0 ? 'md:hairline-r-dark lg:border-r-0' : ''
-                  } md:hairline-b-dark`}
+                className={`group p-8 sm:p-12 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-white/[0.04] flex flex-col justify-between min-h-[320px] ${
+                  isRightBorder ? 'lg:hairline-r-dark' : ''
+                } ${isBottomBorder ? 'lg:hairline-b-dark' : ''} ${
+                  index % 2 === 0 ? 'md:hairline-r-dark lg:border-r-0' : ''
+                } md:hairline-b-dark`}
               >
                 <div>
                   <div className="flex items-center justify-between text-white/40 mb-6">

@@ -24,8 +24,8 @@ export function Eyebrow({
     ? category
       ? `${category} ${index}`
       : index.includes('—')
-        ? index
-        : `ATELIER ${index}`
+      ? index
+      : `ATELIER ${index}`
     : category || '';
 
   return (

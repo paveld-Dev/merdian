@@ -44,8 +44,8 @@ export function Residences() {
                     key={category}
                     onClick={() => setActiveFilter(category)}
                     className={`px-4 py-2 border transition-all duration-300 cursor-pointer ${isActive
-                      ? 'bg-[#121212] text-[#F2F3F1] border-[#121212]'
-                      : 'bg-transparent text-[#121212]/70 border-[#121212]/20 hover:border-[#121212]/60 hover:text-[#121212]'
+                        ? 'bg-[#121212] text-[#F2F3F1] border-[#121212]'
+                        : 'bg-transparent text-[#121212]/70 border-[#121212]/20 hover:border-[#121212]/60 hover:text-[#121212]'
                       }`}
                   >
                     {category}

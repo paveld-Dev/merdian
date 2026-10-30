@@ -77,13 +77,11 @@ export function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-          visible ? 'translate-y-0' : '-translate-y-full'
-        } ${
-          scrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${visible ? 'translate-y-0' : '-translate-y-full'
+          } ${scrolled
             ? 'glass-header py-4'
             : 'bg-gradient-to-b from-black/80 via-black/40 to-transparent py-6'
-        }`}
+          }`}
       >
         <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 flex items-center justify-between">
           {/* Left: Brand Wordmark */}
@@ -158,11 +156,10 @@ export function Header() {
 
       {/* Mobile Fullscreen Overlay Menu */}
       <div
-        className={`fixed inset-0 z-40 bg-[#0B0D10]/98 backdrop-blur-2xl flex flex-col justify-between p-8 sm:p-12 lg:hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-          mobileMenuOpen
-            ? 'opacity-100 pointer-events-auto translate-y-0'
-            : 'opacity-0 pointer-events-none -translate-y-8'
-        }`}
+        className={`fixed inset-0 z-40 bg-[#0B0D10]/98 backdrop-blur-2xl flex flex-col justify-between p-8 sm:p-12 lg:hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${mobileMenuOpen
+          ? 'opacity-100 pointer-events-auto translate-y-0'
+          : 'opacity-0 pointer-events-none -translate-y-8'
+          }`}
       >
         <div className="pt-20">
           <div className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--accent)] mb-8">

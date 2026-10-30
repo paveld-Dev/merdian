@@ -103,15 +103,17 @@ export function Locations() {
                   <div className="relative flex h-7 w-7 items-center justify-center">
                     {/* Pulsing ring */}
                     <span
-                      className={`absolute inline-flex h-full w-full rounded-full opacity-75 animate-ping ${isSelected ? 'bg-[var(--accent)]' : 'bg-white/20'
-                        }`}
+                      className={`absolute inline-flex h-full w-full rounded-full opacity-75 animate-ping ${
+                        isSelected ? 'bg-[var(--accent)]' : 'bg-white/20'
+                      }`}
                     />
                     {/* Core pin dot */}
                     <span
-                      className={`relative inline-flex h-3.5 w-3.5 rounded-full transition-transform duration-300 ${isSelected
+                      className={`relative inline-flex h-3.5 w-3.5 rounded-full transition-transform duration-300 ${
+                        isSelected
                           ? 'bg-[var(--accent)] scale-125 shadow-[0_0_10px_rgba(138,149,165,1)]'
                           : 'bg-white/70 group-hover:bg-white group-hover:scale-110'
-                        }`}
+                      }`}
                     />
                   </div>
 
@@ -144,10 +146,11 @@ export function Locations() {
                     key={loc.id}
                     onMouseEnter={() => setActivePin(loc)}
                     onClick={() => setActivePin(loc)}
-                    className={`py-3.5 px-3 flex items-center justify-between cursor-pointer transition-colors duration-200 ${isActive
+                    className={`py-3.5 px-3 flex items-center justify-between cursor-pointer transition-colors duration-200 ${
+                      isActive
                         ? 'bg-white/10 border-l-2 border-[var(--accent)] text-white'
                         : 'text-white/60 hover:text-white hover:bg-white/5'
-                      }`}
+                    }`}
                   >
                     <div>
                       <div className="font-serif text-lg text-current">{loc.name}</div>

@@ -134,10 +134,11 @@ export function Hero() {
           <button
             type="button"
             onClick={() => setMode('day')}
-            className={`flex items-center gap-2 px-3 py-1 font-mono text-xs tracking-[0.14em] uppercase transition-colors ${mode === 'day'
+            className={`flex items-center gap-2 px-3 py-1 font-mono text-xs tracking-[0.14em] uppercase transition-colors ${
+              mode === 'day'
                 ? 'bg-white text-black font-semibold'
                 : 'text-white/60 hover:text-white'
-              }`}
+            }`}
           >
             <LineIcon name="sun" size={14} />
             <span>DAY</span>
@@ -145,10 +146,11 @@ export function Hero() {
           <button
             type="button"
             onClick={() => setMode('dusk')}
-            className={`flex items-center gap-2 px-3 py-1 font-mono text-xs tracking-[0.14em] uppercase transition-colors ${mode === 'dusk'
+            className={`flex items-center gap-2 px-3 py-1 font-mono text-xs tracking-[0.14em] uppercase transition-colors ${
+              mode === 'dusk'
                 ? 'bg-[var(--accent)] text-[#121212] font-semibold'
                 : 'text-white/60 hover:text-white'
-              }`}
+            }`}
           >
             <LineIcon name="moon" size={14} />
             <span>DUSK</span>

@@ -247,4 +247,9 @@ export function FloorPlan() {
                 Select a numbered hotspot on the blueprint to inspect room specifications.
               </div>
             )}
-  
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
