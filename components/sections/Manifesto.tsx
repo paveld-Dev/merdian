@@ -9,12 +9,12 @@ export function Manifesto() {
   return (
     <section
       id="manifesto"
-      className="relative w-full bg-[var(--paper)] text-[var(--ink)] pt-32 sm:pt-40 lg:pt-48 pb-16 sm:pb-24 overflow-hidden"
+      className="relative w-full bg-[var(--paper)] text-[var(--ink)] py-24 lg:py-44 overflow-hidden"
     >
       {/* Top Hairline & Section Coordinate Markers */}
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
-        <div className="flex items-center justify-between pb-8 hairline-b-light font-mono text-[18px] text-[#121212]/60 tracking-[0.14em] uppercase">
-          <Eyebrow tone="light" index="01">
+        <div className="flex items-center justify-between pb-8 hairline-b-light font-mono text-xs text-[#121212]/60 tracking-[0.18em] uppercase">
+          <Eyebrow tone="light" category="COURSE" index="01">
             ORIGIN MANIFESTO
           </Eyebrow>
           <div className="hidden sm:flex items-center gap-4">
@@ -25,15 +25,14 @@ export function Manifesto() {
         </div>
 
         {/* 10-Col Large Serif Statement */}
-        <div className="py-20 sm:py-28 lg:py-36 max-w-5xl">
-          <RevealText tag="h2" className="display-l font-normal leading-[1.05] tracking-tight">
-            We don&apos;t build houses. We compose{' '}
-            <em className="italic font-normal text-[var(--accent)]">light, stone</em> and{' '}
-            <em className="italic font-normal text-[var(--accent)]">silence</em> into places worth staying.
+        <div className="py-16 sm:py-24 lg:py-32 max-w-5xl">
+          <RevealText tag="h2" className="display-l font-normal">
+            We don&apos;t build houses. We compose light, stone and{' '}
+            <em className="italic font-normal text-[var(--wine)]">silence</em> into places worth staying.
           </RevealText>
 
-          <div className="mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-            <div className="md:col-span-4 font-mono text-[18px] uppercase tracking-[0.14em] text-[#121212]/60">
+          <div className="mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+            <div className="md:col-span-4 font-mono text-xs uppercase tracking-[0.18em] text-[#121212]/60 font-medium">
               PHILOSOPHY OF PERMANENCE
             </div>
             <div className="md:col-span-8 space-y-6 body-l text-[#121212]/80">

@@ -11,16 +11,16 @@ export function Process() {
   return (
     <section
       id="process"
-      className="relative w-full bg-[#121212] text-[#F3F0EA] py-28 sm:py-36 lg:py-48 hairline-t-dark overflow-hidden"
+      className="relative w-full bg-[#121212] text-[#F3F0EA] py-24 lg:py-44 hairline-t-dark overflow-hidden"
     >
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Header */}
-        <div className="max-w-2xl mb-20 sm:mb-28">
-          <Eyebrow tone="brass" index="06" className="mb-4">
+        <div className="max-w-2xl mb-16 sm:mb-24">
+          <Eyebrow tone="brass" category="COURSE" index="07" className="mb-4">
             BLUEPRINT PROTOCOL
           </Eyebrow>
           <h2 className="heading-h2 text-white">
-            From first light to <em className="italic font-normal text-[var(--glow)]">eternal</em> stone.
+            From first light to <em className="italic font-normal text-[var(--pearl)]">eternal</em> stone.
           </h2>
           <p className="body-base text-white/70 mt-4">
             Four rigorous phases ensuring our residential architecture endures across generations without concession.
@@ -34,7 +34,7 @@ export function Process() {
             <div className="h-full bg-[var(--accent)] w-full opacity-80" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 relative z-10">
             {PROCESS_STEPS.map((step, index) => {
               const icon = stepIcons[index] || 'blueprint';
 
@@ -52,7 +52,7 @@ export function Process() {
                   </div>
 
                   {/* Step Number & Duration in Mono */}
-                  <div className="flex items-center justify-between font-mono text-[18px] uppercase tracking-[0.14em] text-[var(--accent)] mb-2">
+                  <div className="flex items-center justify-between font-mono text-xs uppercase tracking-[0.16em] text-[var(--accent)] mb-2">
                     <span>PHASE {step.step}</span>
                     <span className="text-white/60">{step.duration}</span>
                   </div>
@@ -63,12 +63,12 @@ export function Process() {
                   </h3>
 
                   {/* 2-line Description */}
-                  <p className="font-sans text-[18px] text-white/80 leading-relaxed mb-4">
+                  <p className="font-sans text-sm sm:text-base text-white/80 leading-relaxed mb-4">
                     {step.description}
                   </p>
 
                   {/* Details */}
-                  <div className="pt-4 hairline-t-dark font-mono text-[18px] uppercase tracking-wider text-white/50 leading-relaxed">
+                  <div className="pt-4 hairline-t-dark font-mono text-xs uppercase tracking-wider text-white/50 leading-relaxed">
                     {step.details}
                   </div>
                 </div>

@@ -11,26 +11,26 @@ export function Locations() {
   return (
     <section
       id="locations"
-      className="relative w-full bg-[#121212] text-[#F2F3F1] py-28 sm:py-36 lg:py-48 hairline-t-dark"
+      className="relative w-full bg-[#121212] text-[#F2F3F1] py-24 lg:py-44 hairline-t-dark"
     >
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-16 hairline-b-dark">
           <div>
-            <Eyebrow tone="brass" index="08">
+            <Eyebrow tone="brass" category="COURSE" index="09">
               GLOBAL PRESENCE
             </Eyebrow>
             <h2 className="heading-h2 text-white mt-3">
-              Topographies of <em className="italic font-normal text-[var(--glow)]">distinction</em>.
+              Topographies of <em className="italic font-normal text-[var(--pearl)]">distinction</em>.
             </h2>
           </div>
-          <div className="font-mono text-[18px] text-white/60 tracking-wider">
+          <div className="font-mono text-xs sm:text-[13px] text-white/60 tracking-wider">
             38 COMPLETED WORKS · 7 CLIMATIC ZONES
           </div>
         </div>
 
         {/* Map & Location List Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mt-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center mt-12">
           {/* Dot-matrix World Map SVG Canvas (8 Cols) */}
           <div className="lg:col-span-8 relative bg-black/50 border border-white/10 p-6 sm:p-10 aspect-[16/9] flex items-center justify-center overflow-hidden">
             <div className="crop-corner-tl" />
@@ -103,25 +103,23 @@ export function Locations() {
                   <div className="relative flex h-7 w-7 items-center justify-center">
                     {/* Pulsing ring */}
                     <span
-                      className={`absolute inline-flex h-full w-full rounded-full opacity-75 animate-ping ${
-                        isSelected ? 'bg-[var(--accent)]' : 'bg-white/20'
-                      }`}
+                      className={`absolute inline-flex h-full w-full rounded-full opacity-75 animate-ping ${isSelected ? 'bg-[var(--accent)]' : 'bg-white/20'
+                        }`}
                     />
                     {/* Core pin dot */}
                     <span
-                      className={`relative inline-flex h-3.5 w-3.5 rounded-full transition-transform duration-300 ${
-                        isSelected
+                      className={`relative inline-flex h-3.5 w-3.5 rounded-full transition-transform duration-300 ${isSelected
                           ? 'bg-[var(--accent)] scale-125 shadow-[0_0_10px_rgba(138,149,165,1)]'
                           : 'bg-white/70 group-hover:bg-white group-hover:scale-110'
-                      }`}
+                        }`}
                     />
                   </div>
 
                   {/* Active Tooltip on pin */}
                   {isSelected && (
                     <div className="hidden sm:block absolute bottom-8 left-1/2 -translate-x-1/2 bg-[#0B0D10]/95 border border-[var(--accent)]/60 px-3.5 py-2 whitespace-nowrap shadow-xl z-30 pointer-events-none">
-                      <div className="font-serif text-[18px] text-white">{loc.name}</div>
-                      <div className="font-mono text-[18px] text-[var(--accent)] tracking-wider">
+                      <div className="font-serif text-sm text-white">{loc.name}</div>
+                      <div className="font-mono text-xs text-[var(--accent)] tracking-wider">
                         {loc.coordinates}
                       </div>
                     </div>
@@ -133,7 +131,7 @@ export function Locations() {
 
           {/* Right Location List (4 Cols) */}
           <div className="lg:col-span-4 space-y-3">
-            <div className="font-mono text-[18px] uppercase tracking-[0.14em] text-[var(--accent)] mb-4 font-medium">
+            <div className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--accent)] mb-4 font-medium">
               ACTIVE SITES REGISTRY
             </div>
 
@@ -146,21 +144,20 @@ export function Locations() {
                     key={loc.id}
                     onMouseEnter={() => setActivePin(loc)}
                     onClick={() => setActivePin(loc)}
-                    className={`py-3.5 px-3 flex items-center justify-between cursor-pointer transition-colors duration-200 ${
-                      isActive
+                    className={`py-3.5 px-3 flex items-center justify-between cursor-pointer transition-colors duration-200 ${isActive
                         ? 'bg-white/10 border-l-2 border-[var(--accent)] text-white'
                         : 'text-white/60 hover:text-white hover:bg-white/5'
-                    }`}
+                      }`}
                   >
                     <div>
-                      <div className="font-serif text-[20px] text-current">{loc.name}</div>
-                      <div className="text-[18px] tracking-wider text-white/50">
+                      <div className="font-serif text-lg text-current">{loc.name}</div>
+                      <div className="text-xs tracking-wider text-white/50">
                         {loc.region} · {loc.coordinates}
                       </div>
                     </div>
 
                     <div className="text-right">
-                      <span className="font-mono text-[18px] px-2.5 py-1 border border-white/20 text-[var(--accent)]">
+                      <span className="font-mono text-xs px-2.5 py-1 border border-white/20 text-[var(--accent)]">
                         0{loc.count} SITES
                       </span>
                     </div>
@@ -179,7 +176,7 @@ export function Locations() {
                   sizes="350px"
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3 font-mono text-[18px] text-white">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3 font-mono text-xs sm:text-sm text-white">
                   <span>{activePin.name}</span>
                 </div>
               </div>

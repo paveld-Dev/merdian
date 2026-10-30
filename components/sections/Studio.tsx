@@ -9,10 +9,10 @@ export function Studio() {
   return (
     <section
       id="studio"
-      className="relative w-full bg-[var(--paper)] text-[var(--ink)] py-28 sm:py-36 lg:py-44"
+      className="relative w-full bg-[var(--paper)] text-[var(--ink)] py-24 lg:py-44"
     >
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
           {/* Left Column (6 Cols): BeforeAfter Slider with crop marks */}
           <div className="lg:col-span-6 relative">
             <div className="relative p-2 bg-[var(--stone)]/60 hairline-all-light">
@@ -24,7 +24,7 @@ export function Studio() {
               />
             </div>
             {/* Architectural Drawing Dimension Annotation */}
-            <div className="mt-3 flex justify-between font-mono text-[18px] text-[#121212]/50 uppercase tracking-wider">
+            <div className="mt-3 flex justify-between font-mono text-[12px] text-[#121212]/50 uppercase tracking-[0.18em]">
               <span>FIG. 04.1 — SPATIAL CONVERGENCE</span>
               <span>1:50 SCALE ELEVATION</span>
             </div>
@@ -32,12 +32,12 @@ export function Studio() {
 
           {/* Right Column (6 Cols): Content & Stats */}
           <div className="lg:col-span-6 flex flex-col justify-center">
-            <Eyebrow tone="brass" index="01" className="mb-4">
+            <Eyebrow tone="brass" category="COURSE" index="02" className="mb-4">
               THE STUDIO
             </Eyebrow>
 
             <h2 className="heading-h2 text-[#121212] mb-6">
-              Redefining <em className="italic font-normal text-[var(--accent)]">quiet</em> luxury.
+              Redefining <em className="italic font-normal text-[var(--wine)]">quiet</em> luxury.
             </h2>
 
             <div className="space-y-4 body-base text-[#121212]/80 max-w-xl">
@@ -52,26 +52,26 @@ export function Studio() {
             {/* 3 Mono Stats */}
             <div className="grid grid-cols-3 gap-6 py-8 my-8 hairline-t-light hairline-b-light font-mono">
               <div>
-                <div className="text-3xl sm:text-4xl text-[#121212] font-normal font-serif">
+                <div className="text-3xl sm:text-4xl text-[#121212] font-normal font-mono">
                   04
                 </div>
-                <div className="text-[18px] uppercase tracking-wider text-[#121212]/60 mt-1">
+                <div className="text-xs uppercase tracking-[0.18em] text-[#121212]/60 mt-1 font-mono">
                   Commissions / Year
                 </div>
               </div>
               <div>
-                <div className="text-3xl sm:text-4xl text-[#121212] font-normal font-serif">
+                <div className="text-3xl sm:text-4xl text-[#121212] font-normal font-mono">
                   100%
                 </div>
-                <div className="text-[18px] uppercase tracking-wider text-[#121212]/60 mt-1">
+                <div className="text-xs uppercase tracking-[0.18em] text-[#121212]/60 mt-1 font-mono">
                   Custom In-House
                 </div>
               </div>
               <div>
-                <div className="text-3xl sm:text-4xl text-[#121212] font-normal font-serif">
+                <div className="text-3xl sm:text-4xl text-[#121212] font-normal font-mono">
                   15+
                 </div>
-                <div className="text-[18px] uppercase tracking-wider text-[#121212]/60 mt-1">
+                <div className="text-xs uppercase tracking-[0.18em] text-[#121212]/60 mt-1 font-mono">
                   Years of Intent
                 </div>
               </div>
@@ -81,7 +81,7 @@ export function Studio() {
             <div>
               <Link
                 href="#process"
-                className="editorial-link font-mono text-[18px] uppercase tracking-[0.14em] font-medium text-[#121212] hover:text-[var(--accent)]"
+                className="editorial-link font-mono text-[12px] uppercase tracking-[0.18em] font-medium text-[#121212] hover:text-[var(--wine)]"
               >
                 About the Studio →
               </Link>

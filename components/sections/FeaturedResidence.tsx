@@ -11,24 +11,24 @@ export function FeaturedResidence() {
   return (
     <section
       id="featured"
-      className="relative w-full bg-[#2B2A28] text-[#F2F3F1] py-28 sm:py-36 lg:py-48"
+      className="relative w-full bg-[#2B2A28] text-[#F2F3F1] py-24 lg:py-44"
     >
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12">
           {/* Left Column: Sticky on Desktop */}
           <div className="lg:col-span-5 lg:sticky lg:top-32 self-start space-y-8">
-            <Eyebrow tone="brass" index="03">
+            <Eyebrow tone="brass" category="COURSE" index="04">
               FEATURED ARCHITECTURE
             </Eyebrow>
 
             <div>
-              <div className="font-mono text-[18px] uppercase tracking-[0.14em] text-[var(--accent)] mb-2 font-medium">
+              <div className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--accent)] mb-2 font-medium">
                 {FEATURED_RESIDENCE.location}
               </div>
               <h2 className="display-l font-normal text-white mb-4">
                 {FEATURED_RESIDENCE.name}
               </h2>
-              <p className="font-mono text-[18px] text-white/50 tracking-wider">
+              <p className="font-mono text-xs text-white/50 tracking-wider">
                 {FEATURED_RESIDENCE.coordinates}
               </p>
             </div>
@@ -39,7 +39,7 @@ export function FeaturedResidence() {
 
             {/* SpecTable with hairline rows */}
             <div className="pt-4">
-              <div className="font-mono text-[18px] uppercase tracking-[0.14em] text-[var(--accent)] mb-3 font-medium">
+              <div className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--accent)] mb-3 font-medium">
                 MONOLITH SPECIFICATION MATRIX
               </div>
               <SpecTable rows={FEATURED_RESIDENCE.specs} tone="dark" />
@@ -82,7 +82,7 @@ export function FeaturedResidence() {
                     <h3 className="font-serif text-xl sm:text-2xl text-white font-normal mb-1">
                       {story.title}
                     </h3>
-                    <p className="font-sans text-[18px] text-white/80 leading-relaxed max-w-lg">
+                    <p className="font-sans text-sm sm:text-base text-white/80 leading-relaxed max-w-lg">
                       {story.description}
                     </p>
                   </div>

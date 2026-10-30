@@ -25,8 +25,8 @@ export function Footer() {
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 relative z-10">
         {/* Top Row: Back to Top & Category Tag */}
         <div className="flex items-center justify-between pb-16 hairline-b-dark">
-          <div className="flex items-center gap-3 font-mono text-[18px] uppercase tracking-[0.14em] text-[var(--accent)]">
-            <span>13 — MERIDIAN ATELIER</span>
+          <div className="flex items-center gap-3 font-mono text-[12px] uppercase tracking-[0.18em] text-[var(--accent)] font-medium">
+            <span>COURSE 13 — MERIDIAN ATELIER</span>
             <span className="w-8 h-[1px] bg-[var(--accent)]/40" />
             <span className="text-white/40">GENEVA · MILAN · TOKYO</span>
           </div>
@@ -47,10 +47,10 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 py-16 hairline-b-dark">
           {/* Column 1: Studio */}
           <div>
-            <div className="font-mono text-[18px] uppercase tracking-[0.14em] text-[var(--accent)] mb-6 font-medium">
+            <div className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--accent)] mb-6 font-medium">
               THE ATELIER
             </div>
-            <ul className="space-y-3 font-mono text-[18px] text-white/70">
+            <ul className="space-y-3 font-mono text-xs sm:text-[13px] text-white/70">
               <li>
                 <Link href="#studio" className="editorial-link hover:text-white">
                   Philosophy & Intent
@@ -81,10 +81,10 @@ export function Footer() {
 
           {/* Column 2: Residences */}
           <div>
-            <div className="font-mono text-[18px] uppercase tracking-[0.14em] text-[var(--accent)] mb-6 font-medium">
+            <div className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--accent)] mb-6 font-medium">
               COLLECTION
             </div>
-            <ul className="space-y-3 font-mono text-[18px] text-white/70">
+            <ul className="space-y-3 font-mono text-xs sm:text-[13px] text-white/70">
               <li>
                 <Link href="#residences" className="editorial-link hover:text-white">
                   Azure Cliff (Amalfi)
@@ -115,10 +115,10 @@ export function Footer() {
 
           {/* Column 3: Contact & Inquiries */}
           <div>
-            <div className="font-mono text-[18px] uppercase tracking-[0.14em] text-[var(--accent)] mb-6 font-medium">
+            <div className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--accent)] mb-6 font-medium">
               DIRECT INQUIRIES
             </div>
-            <div className="font-mono text-[18px] text-white/70 space-y-4">
+            <div className="font-mono text-xs sm:text-[13px] text-white/70 space-y-4">
               <p>
                 Confidential Desk:
                 <br />
@@ -134,7 +134,7 @@ export function Footer() {
                 <br />
                 <span className="text-white/90">+41 22 819 92 00</span>
               </p>
-              <div className="pt-2 flex flex-wrap gap-4 text-[18px] uppercase tracking-wider text-[var(--accent)]">
+              <div className="pt-2 flex flex-wrap gap-4 text-xs uppercase tracking-wider text-[var(--accent)]">
                 <a href="#instagram" className="hover:text-white transition-colors">
                   Instagram
                 </a>
@@ -150,14 +150,14 @@ export function Footer() {
 
           {/* Column 4: Newsletter */}
           <div>
-            <div className="font-mono text-[18px] uppercase tracking-[0.14em] text-[var(--accent)] mb-6 font-medium">
+            <div className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--accent)] mb-6 font-medium">
               QUARTERLY MONOGRAPH
             </div>
-            <p className="font-serif text-[18px] leading-relaxed text-white/80 mb-6">
+            <p className="font-serif text-sm sm:text-base leading-relaxed text-white/80 mb-6">
               A private print & digital dispatch on spatial physics, rare stones, and completed estates.
             </p>
             {subscribed ? (
-              <div className="p-3 bg-white/5 border border-[var(--accent)]/40 font-mono text-[18px] text-[var(--accent)] tracking-wider uppercase">
+              <div className="p-3 bg-white/5 border border-[var(--accent)]/40 font-mono text-xs text-[var(--accent)] tracking-wider uppercase">
                 ✓ Inscribed into the monograph register.
               </div>
             ) : (
@@ -168,12 +168,12 @@ export function Footer() {
                   placeholder="Enter your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full bg-transparent border-b border-white/20 pb-3 font-mono text-[18px] text-white placeholder-white/40 focus:border-[var(--accent)] outline-none transition-colors"
+                  className="w-full bg-transparent border-b border-white/20 pb-3 font-mono text-xs sm:text-sm text-white placeholder-white/40 focus:border-[var(--accent)] outline-none transition-colors"
                 />
                 <button
                   type="submit"
                   aria-label="Subscribe"
-                  className="absolute right-0 bottom-3 font-mono text-[18px] uppercase tracking-wider text-[var(--accent)] hover:text-white transition-colors"
+                  className="absolute right-0 bottom-3 font-mono text-xs uppercase tracking-wider text-[var(--accent)] hover:text-white transition-colors"
                 >
                   Inscribe →
                 </button>
@@ -183,7 +183,7 @@ export function Footer() {
         </div>
 
         {/* Legal Row */}
-        <div className="pt-10 pb-20 flex flex-col sm:flex-row items-center justify-between font-mono text-[18px] tracking-[0.12em] text-white/50 gap-4">
+        <div className="pt-10 pb-20 flex flex-col sm:flex-row items-center justify-between font-mono text-[11px] tracking-[0.14em] text-white/50 gap-4">
           <div>© 2026 MERIDIAN ARCHITECTURE GROUP SA. ALL RIGHTS RESERVED.</div>
           <div className="flex gap-6">
             <Link href="#privacy" className="hover:text-white/80 transition-colors">

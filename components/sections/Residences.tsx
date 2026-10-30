@@ -20,22 +20,22 @@ export function Residences() {
   return (
     <section
       id="residences"
-      className="relative w-full bg-[var(--stone)] text-[var(--ink)] py-28 sm:py-36 lg:py-44 overflow-hidden hairline-t-light"
+      className="relative w-full bg-[var(--stone)] text-[var(--ink)] py-24 lg:py-44 overflow-hidden hairline-t-light"
     >
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Header with Eyebrow, Title and Filter Chips */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 pb-12 hairline-b-light">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-12 hairline-b-light">
           <div>
-            <Eyebrow tone="brass" index="02" className="mb-4">
+            <Eyebrow tone="brass" category="COURSE" index="03" className="mb-4">
               COLLECTION
             </Eyebrow>
             <h2 className="heading-h2 text-[#121212]">
-              Five places. <em className="italic font-normal text-[var(--accent)]">One</em> philosophy.
+              Five places. <em className="italic font-normal text-[var(--wine)]">One</em> philosophy.
             </h2>
           </div>
 
           {/* Mono Filter Chips */}
-          <div className="flex flex-wrap items-center gap-2 font-mono text-[18px] uppercase tracking-[0.12em]">
+          <div className="flex flex-wrap items-center gap-2 font-mono text-[12px] uppercase tracking-[0.18em]">
             {(['All', 'Coastal', 'Desert', 'Forest', 'Mountain'] as FilterCategory[]).map(
               (category) => {
                 const isActive = activeFilter === category;
@@ -43,9 +43,9 @@ export function Residences() {
                   <button
                     key={category}
                     onClick={() => setActiveFilter(category)}
-                    className={`px-5 py-2.5 border transition-all duration-300 cursor-pointer ${isActive
-                        ? 'bg-[#121212] text-[#F2F3F1] border-[#121212]'
-                        : 'bg-transparent text-[#121212]/70 border-[#121212]/20 hover:border-[#121212]/60 hover:text-[#121212]'
+                    className={`px-4 py-2 border transition-all duration-300 cursor-pointer ${isActive
+                      ? 'bg-[#121212] text-[#F2F3F1] border-[#121212]'
+                      : 'bg-transparent text-[#121212]/70 border-[#121212]/20 hover:border-[#121212]/60 hover:text-[#121212]'
                       }`}
                   >
                     {category}
@@ -86,7 +86,7 @@ export function Residences() {
 
                 {/* Thin Vertical Coordinate Label when compressed */}
                 <div
-                  className={`absolute top-8 left-6 font-mono text-[18px] uppercase tracking-[0.16em] text-white/60 transition-opacity duration-300 ${isExpanded ? 'opacity-0' : 'opacity-100'
+                  className={`absolute top-8 left-6 font-mono text-[11px] uppercase tracking-[0.2em] text-white/60 transition-opacity duration-300 ${isExpanded ? 'opacity-0' : 'opacity-100'
                     }`}
                   style={{ writingMode: 'vertical-rl' }}
                 >
@@ -99,46 +99,46 @@ export function Residences() {
                     }`}
                 >
                   {/* Top Metadata */}
-                  <div className="flex items-center justify-between font-mono text-[18px] uppercase tracking-[0.14em] text-[var(--accent)]">
+                  <div className="flex items-center justify-between font-mono text-xs uppercase tracking-[0.16em] text-[var(--accent)]">
                     <span>{residence.number} · {residence.category} MONOLITH</span>
                     <span className="text-white/60">{residence.coordinates}</span>
                   </div>
 
                   {/* Bottom Information */}
                   <div className="max-w-xl">
-                    <div className="font-mono text-[18px] uppercase tracking-[0.12em] text-white/60 mb-2">
+                    <div className="font-mono text-xs uppercase tracking-[0.14em] text-white/60 mb-2">
                       {residence.location} · {residence.country}
                     </div>
                     <h3 className="font-serif text-3xl xl:text-5xl text-white font-normal mb-3">
                       {residence.name}
                     </h3>
-                    <p className="font-sans text-[18px] text-white/80 mb-6 line-clamp-2 leading-relaxed">
+                    <p className="font-sans text-sm sm:text-base text-white/80 mb-6 line-clamp-2 leading-relaxed">
                       {residence.tagline}
                     </p>
 
                     {/* Specs Row */}
-                    <div className="grid grid-cols-4 gap-4 py-4 hairline-t-dark hairline-b-dark font-mono text-[18px] mb-6 text-white/90">
+                    <div className="grid grid-cols-4 gap-4 py-4 hairline-t-dark hairline-b-dark font-mono text-xs mb-6 text-white/90">
                       <div>
-                        <div className="font-medium text-white">{residence.area}</div>
-                        <div className="text-[18px] text-white/50 uppercase">Area</div>
+                        <div className="font-medium text-white text-sm">{residence.area}</div>
+                        <div className="text-[10px] text-white/50 uppercase tracking-wider">Area</div>
                       </div>
                       <div>
-                        <div className="font-medium text-white">{residence.bedrooms} Beds</div>
-                        <div className="text-[18px] text-white/50 uppercase">Suites</div>
+                        <div className="font-medium text-white text-sm">{residence.bedrooms} Beds</div>
+                        <div className="text-[10px] text-white/50 uppercase tracking-wider">Suites</div>
                       </div>
                       <div>
-                        <div className="font-medium text-white">{residence.bathrooms} Baths</div>
-                        <div className="text-[18px] text-white/50 uppercase">Spa</div>
+                        <div className="font-medium text-white text-sm">{residence.bathrooms} Baths</div>
+                        <div className="text-[10px] text-white/50 uppercase tracking-wider">Spa</div>
                       </div>
                       <div>
-                        <div className="font-medium text-[var(--accent)]">{residence.price}</div>
-                        <div className="text-[18px] text-white/50 uppercase">Investment</div>
+                        <div className="font-medium text-[var(--accent)] text-sm">{residence.price}</div>
+                        <div className="text-[10px] text-white/50 uppercase tracking-wider">Investment</div>
                       </div>
                     </div>
 
                     <Link
                       href="#featured"
-                      className="editorial-link font-mono text-[18px] uppercase tracking-[0.14em] font-medium text-white hover:text-[var(--accent)]"
+                      className="editorial-link font-mono text-xs uppercase tracking-[0.14em] font-medium text-white hover:text-[var(--accent)]"
                     >
                       View Residence Details →
                     </Link>
@@ -166,18 +166,18 @@ export function Residences() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
               <div className="absolute inset-0 p-6 flex flex-col justify-between text-white">
-                <div className="font-mono text-[18px] tracking-wider text-[var(--accent)] uppercase">
+                <div className="font-mono text-xs tracking-wider text-[var(--accent)] uppercase">
                   {residence.number} · {residence.category}
                 </div>
                 <div>
-                  <div className="font-mono text-[18px] text-white/60 uppercase mb-1">
+                  <div className="font-mono text-xs text-white/60 uppercase mb-1">
                     {residence.location}
                   </div>
                   <h3 className="font-serif text-2xl font-normal mb-2">{residence.name}</h3>
-                  <div className="font-mono text-[18px] text-[var(--accent)] mb-4">{residence.price}</div>
+                  <div className="font-mono text-sm text-[var(--accent)] mb-4">{residence.price}</div>
                   <Link
                     href="#featured"
-                    className="editorial-link font-mono text-[18px] uppercase tracking-wider text-white hover:text-[var(--accent)]"
+                    className="editorial-link font-mono text-xs uppercase tracking-wider text-white hover:text-[var(--accent)]"
                   >
                     View Residence →
                   </Link>

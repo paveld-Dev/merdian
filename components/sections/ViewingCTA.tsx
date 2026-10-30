@@ -57,7 +57,7 @@ export function ViewingCTA() {
   return (
     <section
       id="cta"
-      className="relative w-full min-h-[900px] py-32 sm:py-40 flex items-center justify-center bg-[#0B0D10] text-[#F3F0EA] overflow-hidden"
+      className="relative w-full min-h-[900px] py-24 lg:py-44 flex items-center justify-center bg-[#0B0D10] text-[#F3F0EA] overflow-hidden"
     >
       {/* Full-bleed Night Image */}
       <div className="absolute inset-0 z-0">
@@ -74,12 +74,12 @@ export function ViewingCTA() {
 
       {/* Main Glass Form Container */}
       <div className="relative z-10 max-w-[1440px] w-full mx-auto px-5 sm:px-10 lg:px-20 flex flex-col items-center text-center">
-        <div className="font-mono text-[18px] uppercase tracking-[0.16em] text-[var(--accent)] mb-4">
-          12 — INITIATION OF COMMISSION
+        <div className="font-mono text-[12px] uppercase tracking-[0.18em] text-[var(--accent)] mb-4 font-medium">
+          COURSE 12 — INITIATION OF COMMISSION
         </div>
 
         <h2 className="display-l font-normal text-white mb-6 max-w-3xl">
-          Your next chapter, <em className="italic font-normal text-[var(--glow)]">drawn</em> for you.
+          Your next chapter, <em className="italic font-normal text-[var(--pearl)]">drawn</em> for you.
         </h2>
 
         <p className="body-base text-white/75 font-sans max-w-xl mb-12">
@@ -101,10 +101,10 @@ export function ViewingCTA() {
               <h3 className="font-serif text-3xl text-white font-normal">
                 Communication Received
               </h3>
-              <p className="font-sans text-[18px] text-white/70 max-w-md mx-auto leading-relaxed">
+              <p className="font-sans text-sm sm:text-base text-white/70 max-w-md mx-auto leading-relaxed">
                 A partner from our private advisory desk will contact you within 24 hours via secure transmission.
               </p>
-              <div className="pt-4 font-mono text-[18px] text-[var(--accent)] uppercase tracking-wider font-medium">
+              <div className="pt-4 font-mono text-xs sm:text-sm text-[var(--accent)] uppercase tracking-wider font-medium">
                 REFERENCE PROTOCOL #MRD-{referenceCode}
               </div>
               <div className="pt-6">
@@ -119,7 +119,7 @@ export function ViewingCTA() {
                       location: 'Amalfi Coast, Italy',
                     });
                   }}
-                  className="font-mono text-[18px] uppercase tracking-wider text-white/60 hover:text-white underline underline-offset-4"
+                  className="font-mono text-xs uppercase tracking-wider text-white/60 hover:text-white underline underline-offset-4"
                 >
                   Submit Another Inquiry
                 </button>
@@ -131,7 +131,7 @@ export function ViewingCTA() {
               <div className="relative">
                 <label
                   htmlFor="cta-name"
-                  className="block font-mono text-[18px] uppercase tracking-[0.14em] text-[var(--accent)] mb-2 font-medium"
+                  className="block font-mono text-xs uppercase tracking-[0.16em] text-[var(--accent)] mb-2 font-medium"
                 >
                   Full Name / Legal Entity *
                 </label>
@@ -152,7 +152,7 @@ export function ViewingCTA() {
                   <p
                     id="cta-name-error"
                     role="alert"
-                    className="mt-1 font-mono text-[18px] text-amber-400 tracking-wider"
+                    className="mt-1 font-mono text-xs text-amber-400 tracking-wider"
                   >
                     {errors.name}
                   </p>
@@ -163,7 +163,7 @@ export function ViewingCTA() {
               <div className="relative">
                 <label
                   htmlFor="cta-email"
-                  className="block font-mono text-[18px] uppercase tracking-[0.14em] text-[var(--accent)] mb-2 font-medium"
+                  className="block font-mono text-xs uppercase tracking-[0.16em] text-[var(--accent)] mb-2 font-medium"
                 >
                   Private Email Address *
                 </label>
@@ -184,7 +184,7 @@ export function ViewingCTA() {
                   <p
                     id="cta-email-error"
                     role="alert"
-                    className="mt-1 font-mono text-[18px] text-amber-400 tracking-wider"
+                    className="mt-1 font-mono text-xs text-amber-400 tracking-wider"
                   >
                     {errors.email}
                   </p>
@@ -196,7 +196,7 @@ export function ViewingCTA() {
                 <div>
                   <label
                     htmlFor="cta-interest"
-                    className="block font-mono text-[18px] uppercase tracking-[0.14em] text-[var(--accent)] mb-2 font-medium"
+                    className="block font-mono text-xs uppercase tracking-[0.16em] text-[var(--accent)] mb-2 font-medium"
                   >
                     Nature of Inquiry
                   </label>
@@ -206,7 +206,7 @@ export function ViewingCTA() {
                     onChange={(e) =>
                       setFormData({ ...formData, interest: e.target.value })
                     }
-                    className="w-full bg-[#121212] border-b border-white/20 pb-2.5 font-sans text-[18px] text-white focus:border-[var(--accent)] outline-none cursor-pointer"
+                    className="w-full bg-[#121212] border-b border-white/20 pb-2.5 font-sans text-sm sm:text-base text-white focus:border-[var(--accent)] outline-none cursor-pointer"
                   >
                     <option value="Acquisition of Active Residence">
                       Acquisition of Active Residence
@@ -226,7 +226,7 @@ export function ViewingCTA() {
                 <div>
                   <label
                     htmlFor="cta-location"
-                    className="block font-mono text-[18px] uppercase tracking-[0.14em] text-[var(--accent)] mb-2 font-medium"
+                    className="block font-mono text-xs uppercase tracking-[0.16em] text-[var(--accent)] mb-2 font-medium"
                   >
                     Preferred Location / Terrain
                   </label>
@@ -236,7 +236,7 @@ export function ViewingCTA() {
                     onChange={(e) =>
                       setFormData({ ...formData, location: e.target.value })
                     }
-                    className="w-full bg-[#121212] border-b border-white/20 pb-2.5 font-sans text-[18px] text-white focus:border-[var(--accent)] outline-none cursor-pointer"
+                    className="w-full bg-[#121212] border-b border-white/20 pb-2.5 font-sans text-sm sm:text-base text-white focus:border-[var(--accent)] outline-none cursor-pointer"
                   >
                     <option value="Amalfi Coast, Italy">Amalfi Coast, Italy</option>
                     <option value="Southern Utah, USA">Southern Utah, USA</option>
@@ -264,7 +264,7 @@ export function ViewingCTA() {
 
               {/* Confidentiality Mono Note */}
               <div className="text-center pt-2">
-                <span className="font-mono text-[18px] tracking-[0.14em] uppercase text-white/60">
+                <span className="font-mono text-xs tracking-[0.16em] uppercase text-white/60">
                   RESPONSE WITHIN 24 HOURS · STRICTLY CONFIDENTIAL
                 </span>
               </div>

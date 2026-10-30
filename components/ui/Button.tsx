@@ -27,31 +27,26 @@ export function Button({
   disabled = false,
 }: ButtonProps) {
   const baseClasses =
-    'group relative inline-flex items-center justify-between h-12 px-6 font-sans text-xs sm:text-[13px] uppercase tracking-[0.14em] font-medium transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] select-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed';
+    'group relative inline-flex items-center justify-between h-[56px] px-8 rounded-none font-mono text-[12px] uppercase tracking-[0.18em] font-medium transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] select-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed';
 
   let variantClasses = '';
 
   if (variant === 'primary') {
-    if (tone === 'dark') {
-      // Pure white button on dark background for maximum luxury contrast
-      variantClasses =
-        'bg-white text-[#121212] hover:bg-[#F2F3F1] active:bg-[#E2E5E3] shadow-lg';
-    } else {
-      // Dark button on light background: ink on paper
-      variantClasses =
-        'bg-[#121212] text-white hover:bg-black active:bg-[#2B2A28]';
-    }
+    // Primary: --wine fill with --pearl text
+    variantClasses =
+      'bg-[var(--wine)] text-[var(--pearl)] hover:brightness-115 active:brightness-90 shadow-md';
   } else if (variant === 'ghost') {
     if (tone === 'dark') {
+      // Ghost: 1px --pearl/30% border with --pearl text
       variantClasses =
-        'bg-black/30 backdrop-blur-sm text-white border border-white/40 hover:border-white hover:bg-white/10 active:bg-white/15';
+        'bg-transparent text-[var(--pearl)] border border-[var(--pearl)]/30 hover:border-[var(--pearl)] hover:bg-[var(--pearl)]/10 active:bg-[var(--pearl)]/15';
     } else {
       variantClasses =
         'bg-transparent text-[#121212] border border-[#121212]/30 hover:border-[#121212] hover:bg-[#121212]/5 active:bg-[#121212]/10';
     }
   } else if (variant === 'glass') {
     variantClasses =
-      'bg-white/10 backdrop-blur-md text-white border border-white/25 hover:border-white/60 hover:bg-white/20 active:bg-white/25';
+      'bg-white/10 backdrop-blur-md text-[var(--pearl)] border border-[var(--pearl)]/30 hover:border-[var(--pearl)] hover:bg-white/20 active:bg-white/25';
   }
 
   const defaultArrow = (

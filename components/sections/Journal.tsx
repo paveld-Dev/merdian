@@ -12,29 +12,29 @@ export function Journal() {
   return (
     <section
       id="journal"
-      className="relative w-full bg-[#121212] text-[#F2F3F1] py-28 sm:py-36 lg:py-48 hairline-t-dark"
+      className="relative w-full bg-[#121212] text-[#F2F3F1] py-24 lg:py-44 hairline-t-dark"
     >
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 pb-16 hairline-b-dark">
           <div>
-            <Eyebrow tone="brass" index="10" className="mb-4">
+            <Eyebrow tone="brass" category="COURSE" index="11" className="mb-4">
               EDITORIAL DISPATCH
             </Eyebrow>
             <h2 className="heading-h2 text-white">
-              The Architecture <em className="italic font-normal text-[var(--glow)]">Journal</em>.
+              The Architecture <em className="italic font-normal text-[var(--pearl)]">Journal</em>.
             </h2>
           </div>
           <Link
             href="#journal"
-            className="editorial-link font-mono text-[18px] uppercase tracking-[0.14em] text-[var(--accent)] hover:text-white"
+            className="editorial-link font-mono text-[12px] uppercase tracking-[0.18em] text-[var(--accent)] hover:text-white"
           >
             All Stories →
           </Link>
         </div>
 
         {/* Editorial Layout: 1 Large Feature (4:5) + 2 Stacked Smaller Articles */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-12 items-start">
           {/* Large Feature (7 Cols, 4:5 aspect) */}
           <div className="lg:col-span-7 group cursor-pointer">
             <div className="relative aspect-[4/5] w-full overflow-hidden bg-black/60 border border-white/10 mb-6">
@@ -53,7 +53,7 @@ export function Journal() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             </div>
 
-            <div className="flex items-center justify-between font-mono text-[18px] tracking-[0.14em] text-[var(--accent)] uppercase mb-2">
+            <div className="flex items-center justify-between font-mono text-xs tracking-[0.14em] text-[var(--accent)] uppercase mb-2">
               <span>{featured.category}</span>
               <span className="text-white/50">{featured.readTime}</span>
             </div>
@@ -62,11 +62,11 @@ export function Journal() {
               {featured.title}
             </h3>
 
-            <p className="font-sans text-[18px] text-white/80 leading-relaxed mb-4 max-w-xl">
+            <p className="font-sans text-sm sm:text-base text-white/80 leading-relaxed mb-4 max-w-xl">
               {featured.excerpt}
             </p>
 
-            <span className="editorial-link font-mono text-[18px] uppercase tracking-wider text-white">
+            <span className="editorial-link font-mono text-xs uppercase tracking-wider text-white">
               Read Monograph →
             </span>
           </div>
@@ -89,7 +89,7 @@ export function Journal() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 </div>
 
-                <div className="flex items-center justify-between font-mono text-[18px] tracking-[0.14em] text-[var(--accent)] uppercase mb-2">
+                <div className="flex items-center justify-between font-mono text-xs tracking-[0.14em] text-[var(--accent)] uppercase mb-2">
                   <span>{article.category}</span>
                   <span className="text-white/50">{article.readTime}</span>
                 </div>
@@ -98,11 +98,11 @@ export function Journal() {
                   {article.title}
                 </h3>
 
-                <p className="font-sans text-[18px] text-white/80 leading-relaxed mb-3">
+                <p className="font-sans text-sm sm:text-base text-white/80 leading-relaxed mb-3">
                   {article.excerpt}
                 </p>
 
-                <span className="editorial-link font-mono text-[18px] uppercase tracking-wider text-white">
+                <span className="editorial-link font-mono text-xs uppercase tracking-wider text-white">
                   Read Article →
                 </span>
               </div>

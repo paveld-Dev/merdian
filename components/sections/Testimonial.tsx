@@ -33,15 +33,15 @@ export function Testimonial() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B0D10] via-transparent to-[#0B0D10]/40" />
       </div>
 
-      <div className="relative z-10 max-w-[1440px] w-full mx-auto px-5 sm:px-10 lg:px-20 py-20">
+      <div className="relative z-10 max-w-[1440px] w-full mx-auto px-5 sm:px-10 lg:px-20 py-24 lg:py-44">
         <div className="max-w-2xl">
-          <Eyebrow tone="brass" index="09" className="mb-6">
+          <Eyebrow tone="brass" category="COURSE" index="10" className="mb-6">
             LIVED EXPERIENCE
           </Eyebrow>
 
           {/* Serif Italic Quote, max 18 words */}
           <div className="min-h-[160px] sm:min-h-[190px] flex items-center">
-            <blockquote className="font-serif italic text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight text-white transition-opacity duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]">
+            <blockquote className="font-serif italic text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight text-[var(--pearl)] transition-opacity duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]">
               &ldquo;{current.quote}&rdquo;
             </blockquote>
           </div>
@@ -49,17 +49,17 @@ export function Testimonial() {
           {/* Name + Residence in Mono */}
           <div className="mt-8 pt-6 hairline-t-dark flex flex-col sm:flex-row sm:items-center justify-between gap-6 font-mono">
             <div>
-              <div className="text-[18px] uppercase tracking-[0.14em] text-[#F2F3F1] font-medium">
+              <div className="text-sm sm:text-base uppercase tracking-[0.14em] text-[#F2F3F1] font-medium">
                 {current.client}
               </div>
-              <div className="text-[18px] text-[var(--accent)] tracking-wider uppercase mt-1">
+              <div className="text-xs text-[var(--accent)] tracking-wider uppercase mt-1">
                 {current.residence} · {current.location} ({current.year})
               </div>
             </div>
 
             {/* 01/03 Pager with Circular Arrow Buttons */}
             <div className="flex items-center gap-4">
-              <span className="text-[18px] text-white/60 tracking-wider">
+              <span className="text-xs text-white/60 tracking-wider">
                 0{index + 1} / 0{TESTIMONIALS.length}
               </span>
               <div className="flex items-center gap-2">

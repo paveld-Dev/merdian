@@ -134,42 +134,40 @@ export function Hero() {
           <button
             type="button"
             onClick={() => setMode('day')}
-            className={`flex items-center gap-2 px-3 py-1 font-mono text-[18px] tracking-[0.14em] uppercase transition-colors ${
-              mode === 'day'
+            className={`flex items-center gap-2 px-3 py-1 font-mono text-xs tracking-[0.14em] uppercase transition-colors ${mode === 'day'
                 ? 'bg-white text-black font-semibold'
                 : 'text-white/60 hover:text-white'
-            }`}
+              }`}
           >
-            <LineIcon name="sun" size={16} />
+            <LineIcon name="sun" size={14} />
             <span>DAY</span>
           </button>
           <button
             type="button"
             onClick={() => setMode('dusk')}
-            className={`flex items-center gap-2 px-3 py-1 font-mono text-[18px] tracking-[0.14em] uppercase transition-colors ${
-              mode === 'dusk'
+            className={`flex items-center gap-2 px-3 py-1 font-mono text-xs tracking-[0.14em] uppercase transition-colors ${mode === 'dusk'
                 ? 'bg-[var(--accent)] text-[#121212] font-semibold'
                 : 'text-white/60 hover:text-white'
-            }`}
+              }`}
           >
-            <LineIcon name="moon" size={16} />
+            <LineIcon name="moon" size={14} />
             <span>DUSK</span>
           </button>
         </div>
       </div>
 
       {/* Center Main Content Grid */}
-      <div className="relative z-20 max-w-[1440px] w-full mx-auto px-5 sm:px-10 lg:px-20 pt-24 sm:pt-28 pb-6 flex-1 flex flex-col justify-center">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div className="relative z-20 max-w-[1440px] w-full mx-auto px-5 sm:px-10 lg:px-20 pt-24 sm:pt-28 pb-8 flex-1 flex flex-col justify-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
           {/* Left Column: Headlines & CTA Buttons */}
           <div className="lg:col-span-7 xl:col-span-8">
-            <h1 className="font-serif text-[clamp(44px,6vw,80px)] leading-[1.04] tracking-tight text-white font-normal mb-4 max-w-2xl">
+            <h1 className="display-xl text-white font-normal mb-6">
               Architecture <br />
-              that <em className="italic font-normal text-[var(--glow)]">breathes</em> <br />
+              that <em className="italic font-normal text-[var(--pearl)]">breathes</em> <br />
               with its land.
             </h1>
 
-            <p className="text-[18px] text-white/85 font-sans mb-5 max-w-lg leading-relaxed">
+            <p className="body-l text-white/85 font-sans mb-8">
               We design monolithic private residences at the extreme edge of nature. Cantilevered stone, quiet water reflections, and rooms drawn with celestial intent.
             </p>
 
@@ -203,7 +201,7 @@ export function Hero() {
 
       {/* Right Edge: Vertical Animated SCROLL Label */}
       <div className="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 z-20 flex-col items-center gap-3 pointer-events-none select-none">
-        <span className="font-mono text-[18px] uppercase tracking-[0.2em] text-white/40 [writing-mode:vertical-rl]">
+        <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-white/40 [writing-mode:vertical-rl]">
           SCROLL
         </span>
         <div className="w-[1px] h-12 bg-white/20 relative overflow-hidden">
@@ -213,7 +211,7 @@ export function Hero() {
 
       {/* Bottom Architectural Strip */}
       <div className="relative z-20 w-full hairline-t-dark bg-black/40 backdrop-blur-md">
-        <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 py-2.5 grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-white/10 font-mono text-[18px] uppercase tracking-[0.12em] text-white/80">
+        <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20 py-2.5 grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-white/10 font-mono text-xs uppercase tracking-[0.14em] text-white/80">
           <div className="flex items-center gap-3 py-0.5 justify-start sm:justify-start">
             <LineIcon name="clock" size={18} className="text-[var(--accent)]" />
             <span>Timeless Monolithic Design</span>

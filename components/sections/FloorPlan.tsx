@@ -18,17 +18,17 @@ export function FloorPlan() {
   return (
     <section
       id="floorplan"
-      className="relative w-full bg-[#121212] text-[#F2F3F1] py-28 sm:py-36 lg:py-44 hairline-t-dark"
+      className="relative w-full bg-[#121212] text-[#F2F3F1] py-24 lg:py-44 hairline-t-dark"
     >
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Section Header & Tablist */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-12 hairline-b-dark">
           <div>
-            <Eyebrow tone="brass" index="04">
+            <Eyebrow tone="brass" category="COURSE" index="05">
               SPATIAL BLUEPRINT
             </Eyebrow>
             <h2 className="heading-h2 text-white mt-3">
-              Interactive Floor Plan <em className="italic font-normal text-[var(--glow)]">Explorer</em>.
+              Interactive Floor Plan <em className="italic font-normal text-[var(--pearl)]">Explorer</em>.
             </h2>
           </div>
 
@@ -36,7 +36,7 @@ export function FloorPlan() {
           <div
             role="tablist"
             aria-label="Floor plan levels"
-            className="flex items-center bg-white/5 border border-white/15 p-1 self-start md:self-auto font-mono text-[18px] uppercase tracking-[0.12em]"
+            className="flex items-center bg-white/5 border border-white/15 p-1 self-start md:self-auto font-mono text-[12px] uppercase tracking-[0.18em]"
           >
             {(['Ground', 'Upper', 'Roof'] as Level[]).map((level) => {
               const isSelected = activeLevel === level;
@@ -50,7 +50,7 @@ export function FloorPlan() {
                     const firstForLevel = FLOOR_PLAN_HOTSPOTS.find((h) => h.level === level);
                     if (firstForLevel) setSelectedHotspot(firstForLevel);
                   }}
-                  className={`px-5 py-2.5 transition-colors cursor-pointer ${
+                  className={`px-4 py-2 transition-colors cursor-pointer ${
                     isSelected
                       ? 'bg-[var(--accent)] text-[#121212] font-semibold'
                       : 'text-white/60 hover:text-white'
@@ -64,7 +64,7 @@ export function FloorPlan() {
         </div>
 
         {/* Blueprint Viewer Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mt-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center mt-12">
           {/* Blueprint SVG Canvas (8 Cols) */}
           <div className="lg:col-span-8 relative bg-black/60 border border-white/15 p-6 sm:p-12 overflow-hidden aspect-[16/10]">
             {/* Technical Corner Crop Marks */}
@@ -84,7 +84,7 @@ export function FloorPlan() {
             />
 
             {/* Scale & Metadata Badge */}
-            <div className="absolute top-4 left-6 font-mono text-[18px] text-white/50 uppercase tracking-wider">
+            <div className="absolute top-4 left-6 font-mono text-[11px] text-white/50 uppercase tracking-widest">
               LEVEL: {activeLevel.toUpperCase()} · SCALE 1:100 METRIC · BEARING 142° SE
             </div>
 
@@ -185,7 +185,7 @@ export function FloorPlan() {
                     />
                     {/* Core Button */}
                     <span
-                      className={`relative inline-flex items-center justify-center rounded-full h-8 w-8 font-mono text-[18px] font-semibold transition-all duration-300 ${
+                      className={`relative inline-flex items-center justify-center rounded-full h-8 w-8 font-mono text-xs font-semibold transition-all duration-300 ${
                         isSelected
                           ? 'bg-[var(--accent)] text-[#121212] scale-110 shadow-[0_0_12px_rgba(138,149,165,0.8)]'
                           : 'bg-[#121212] text-white border border-white/40 group-hover:border-white'
@@ -208,7 +208,7 @@ export function FloorPlan() {
                 <div className="crop-corner-bl" />
                 <div className="crop-corner-br" />
 
-                <div className="flex items-center justify-between font-mono text-[18px] uppercase tracking-[0.14em] text-[var(--accent)] pb-3 hairline-b-dark font-medium">
+                <div className="flex items-center justify-between font-mono text-xs uppercase tracking-[0.16em] text-[var(--accent)] pb-3 hairline-b-dark font-medium">
                   <span>SPECIFICATION</span>
                   <span>{selectedHotspot.number} / {activeLevel.toUpperCase()}</span>
                 </div>
@@ -217,7 +217,7 @@ export function FloorPlan() {
                   <h3 className="font-serif text-3xl sm:text-4xl font-normal text-white mb-1">
                     {selectedHotspot.name}
                   </h3>
-                  <div className="font-mono text-[18px] text-white/60 tracking-wider mb-4">
+                  <div className="font-mono text-xs text-white/60 tracking-wider mb-4">
                     INTERNAL FOOTPRINT · {selectedHotspot.area}
                   </div>
                 </div>
@@ -233,23 +233,18 @@ export function FloorPlan() {
                   />
                 </div>
 
-                <p className="font-sans text-[18px] text-white/80 leading-relaxed pt-2">
+                <p className="font-sans text-sm sm:text-base text-white/80 leading-relaxed pt-2">
                   {selectedHotspot.description}
                 </p>
 
-                <div className="mt-6 pt-4 hairline-t-dark flex justify-between items-center font-mono text-[18px] text-white/70">
+                <div className="mt-6 pt-4 hairline-t-dark flex justify-between items-center font-mono text-xs text-white/70">
                   <span>21°C OPTIMAL</span>
                   <span className="text-[var(--accent)]">PASSIVE SOLAR</span>
                 </div>
               </div>
             ) : (
-              <div className="glass-dark p-8 text-center font-mono text-[18px] text-white/50">
+              <div className="glass-dark p-8 text-center font-mono text-xs text-white/50">
                 Select a numbered hotspot on the blueprint to inspect room specifications.
               </div>
             )}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+  

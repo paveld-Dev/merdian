@@ -19,17 +19,17 @@ export function Services() {
   return (
     <section
       id="services"
-      className="relative w-full bg-[#121212] text-[#F2F3F1] py-28 sm:py-36 lg:py-48 hairline-t-dark"
+      className="relative w-full bg-[#121212] text-[#F2F3F1] py-24 lg:py-44 hairline-t-dark"
     >
       <div className="max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-20">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-16 hairline-b-dark">
           <div>
-            <Eyebrow tone="brass" index="07" className="mb-4">
+            <Eyebrow tone="brass" category="COURSE" index="08" className="mb-4">
               ARCHITECTURAL PRACTICE
             </Eyebrow>
             <h2 className="heading-h2 text-white">
-              Disciplines of <em className="italic font-normal text-[var(--glow)]">pure</em> intent.
+              Disciplines of <em className="italic font-normal text-[var(--pearl)]">pure</em> intent.
             </h2>
           </div>
           <p className="body-base text-white/60 max-w-md">
@@ -48,15 +48,13 @@ export function Services() {
               <Link
                 key={srv.id}
                 href="#cta"
-                className={`group p-8 sm:p-12 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-white/[0.04] flex flex-col justify-between min-h-[320px] ${
-                  isRightBorder ? 'lg:hairline-r-dark' : ''
-                } ${isBottomBorder ? 'lg:hairline-b-dark' : ''} ${
-                  index % 2 === 0 ? 'md:hairline-r-dark lg:border-r-0' : ''
-                } md:hairline-b-dark`}
+                className={`group p-8 sm:p-12 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:bg-white/[0.04] flex flex-col justify-between min-h-[320px] ${isRightBorder ? 'lg:hairline-r-dark' : ''
+                  } ${isBottomBorder ? 'lg:hairline-b-dark' : ''} ${index % 2 === 0 ? 'md:hairline-r-dark lg:border-r-0' : ''
+                  } md:hairline-b-dark`}
               >
                 <div>
                   <div className="flex items-center justify-between text-white/40 mb-6">
-                    <span className="font-mono text-[18px] uppercase tracking-wider text-[var(--accent)] font-medium">
+                    <span className="font-mono text-xs uppercase tracking-wider text-[var(--accent)] font-medium">
                       {srv.number}
                     </span>
                     <LineIcon
@@ -70,13 +68,13 @@ export function Services() {
                     {srv.title}
                   </h3>
 
-                  <p className="font-sans text-[18px] text-white/80 leading-relaxed mb-6">
+                  <p className="font-sans text-sm sm:text-base text-white/80 leading-relaxed mb-6">
                     {srv.description}
                   </p>
                 </div>
 
                 <div className="pt-6 hairline-t-dark flex items-center justify-between text-white/40 group-hover:text-white transition-colors">
-                  <span className="font-mono text-[18px] uppercase tracking-wider text-white/60">
+                  <span className="font-mono text-xs uppercase tracking-wider text-white/60">
                     {srv.scope}
                   </span>
                   <svg
